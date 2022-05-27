@@ -1,0 +1,73 @@
+.typewriter {
+    display: flex;
+    flex-direction: row;
+}
+
+#imagen {
+    width: 180px;
+    height: 180px;
+    animation: appear 3s,  spin 3s 4s;
+}
+
+.texto {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: center;
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    animation: 
+        typing 3s steps(30, end) 6s, show 10s 9s
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0% }
+    to { width: 100% }
+}
+
+@keyframes spin {
+    0% {
+        transform:rotate(0deg);
+    }
+    50% {
+        transform:rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes show {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    75% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
